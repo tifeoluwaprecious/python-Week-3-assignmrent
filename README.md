@@ -1,4 +1,24 @@
-# python-Week-3-assignmrent
-Week 3 python Assignment
--- Create a function named 'calculate_discount(price, discount_percent)' that calculates the final price after applying a discount. The function should take the 'original price (price)' and the 'discount percentage (discount_percent)' as parameters. If the discount is 20% or higher, apply the 'discount; otherwise, return the original price'.
--- Using the 'calculate_discount function', prompt the user to enter the 'original price' of an item and the 'discount percentag'e. Print the final price after applying the discount, or if no discount was applied, print the original price.
+# Week 3 Assignment
+
+## Question 1
+- Define a function `calculate_discount(price, discount_percent)`  
+- The function should:  
+  1. Check if the discount is **20% or higher**.  
+  2. If true, calculate the discount amount and subtract it from the original price.  
+  3. Return the final price.  
+  4. If false, return the original price without any discount.  
+
+### Python Code:
+```python
+def calculate_discount(price, discount_percent):
+    """
+    Calculates the final price after applying a discount.
+    If the discount is 20% or higher, it is applied.
+    Otherwise, the original price is returned.
+    """
+    if discount_percent >= 20:
+        discount_amount = price * (discount_percent / 100)
+        final_price = price - discount_amount
+        return final_price
+    else:
+        return price
